@@ -24,7 +24,7 @@
 // 9 - Create a variable called `pets` and set it to the value of the number of pets you have
     let pets = 2;
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-    let friendsPets = 9;
+    let friendsPets = 1;
 // 11 - Add two pets to your `pets` variable
     pets = pets + 2;
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
@@ -61,23 +61,16 @@
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
-  let mostPets;
-  if(pets > friendsPets){
-     mostPets = pets;
-  }
-  else{
-    mostPets = friendsPets;
-  }
+  let mostPets = (pets > friendsPets) ? pets : friendsPets;
   console.log(mostPets);
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
-//let mostPets;
-  switch (pets > friendsPets) {
-    case 1:
+  switch (mostPets) {
+    case pets:
          mostPets = pets;
       break;
-    case 2:
-        mostPets = friendsPets;
+    case friendsPets:
+         mostPets = friendsPets;
       break;
 }
  console.log(mostPets);
